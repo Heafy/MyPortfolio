@@ -10,10 +10,10 @@ import SwiftUI
 struct NotificationView: View {
     
     @ObservedObject var notificationManager = NotificationViewModel()
-    @State var showFootnote = false
+    @State var showFootnote = true
     
     var body: some View {
-             VStack {
+        VStack(spacing: 20) {
                  Button(action: {
                      withAnimation {
                          self.showFootnote.toggle()
@@ -21,15 +21,15 @@ struct NotificationView: View {
                          self.notificationManager.sendNotification(title: "Hurray!", subtitle: nil, body: "If you see this text, launching the local notification worked!", launchIn: 5)
                      }
                  }) {
-                     Text("Launch Local Notification 🚀")
-                         .font(.title)
+                     Text("Launch Notification 🚨")
                  }
                  if showFootnote {
-                     Text("Notification Arrives in 5 seconds")
-                         .font(.footnote)
+                     Text("Notification Arrives in 5 seconds, please go Home")
+                        .font(.caption)
+                        .multilineTextAlignment(.center)
                  }
              }
-                 .navigationBarTitle("Local Notification Demo", displayMode: .inline)
+                 .navigationBarTitle("Custom Notification", displayMode: .inline)
      }
  }
 

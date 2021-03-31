@@ -9,34 +9,62 @@ import MapKit
 import SwiftUI
 
 struct MapView : UIViewRepresentable {
+        
+    var place: Place
+    var radius: CLLocationDistance
+    var color: Color = .purple
     
-    //@Binding var centerCoordinate: MKCoordinateRegion
+    final class Coordinator: NSObject, MKMapViewDelegate {
+        
+        var parent: MapView
+        
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+        
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if overlay is MKCircle {
+                let circle = MKCircleRenderer(overlay: overlay)
+                circle.strokeColor = UIColor(self.parent.color)
+                circle.fillColor = UIColor(self.parent.color).withAlphaComponent(0.1)
+                circle.lineWidth = 1
+                return circle
+            } else {
+                return MKOverlayRenderer(overlay: overlay)
+            }
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
     
     func makeUIView(context: Context) -> MKMapView {
-        MKMapView(frame: .zero)
+        let mapView = MKMapView(frame: .zero)
+        mapView.delegate = context.coordinator
+        return mapView
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
         view.showsUserLocation = true
-        let coordinate = CLLocationCoordinate2D(
-            latitude: 19.28575286200017, longitude: -99.12999353867754)
-        let region = MKCoordinateRegion(center: view.userLocation.location?.coordinate ?? coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        // Crea una region con centro en la coordenada recibida
+        let region = MKCoordinateRegion(center: place.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         view.setRegion(region, animated: true)
+        // Crea el punto central
+        let annotation = MKPointAnnotation()
+        
+
+        annotation.title = self.place.name
+        annotation.coordinate = place.coordinate
+        view.addAnnotation(annotation)
+        // Crea el ciruclo
+        let circle = MKCircle(center: place.coordinate, radius: self.radius)
+        view.addOverlay(circle)
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
-    }
-}
-
-extension MKPointAnnotation {
-    static var example: MKPointAnnotation {
-        let annotation = MKPointAnnotation()
-        annotation.title = "London"
-        annotation.subtitle = "Home to the 2012 Summer Olympics."
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
-        return annotation
+        MapView(place: Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717), radius: 20)
     }
 }

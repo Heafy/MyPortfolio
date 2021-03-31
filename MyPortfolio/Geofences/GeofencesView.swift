@@ -10,14 +10,12 @@ import SwiftUI
 
 struct GeofencesView: View {
     
-    let places = [
-        Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
-        //Place(name: "Oasis Coyoacán", latitude: 19.345825571951718, longitude: -99.17963082130434)
-    ]
-    
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.324378435363094, longitude: -99.17893055616717), latitudinalMeters: 10000, longitudinalMeters: 10000)
-    
-    @State private var tracking: MapUserTrackingMode = .follow
+    // Lista de lugares para mostrar
+    // Por definición solo observa un geofence
+    var places: [Place]
+    // Radio de la geofence
+    var radius: CLLocationDistance
+
     @State private var locationManager = CLLocationManager()
     @StateObject private var managerDelegate = LocationDelegate()
     
@@ -36,28 +34,34 @@ struct GeofencesView: View {
             .padding()
             .multilineTextAlignment(.center)
             
-            Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: $tracking, annotationItems: places) {
-                place in
-                MapMarker(coordinate: place.coordinate)
-            }
+            MapView(place: places.first!, radius: self.radius)
+                .ignoresSafeArea()
+            
             .navigationBarTitle("Geofences", displayMode: .inline)
         } //: VStack
         .onAppear(perform: {
+            
+            guard let place = places.first else {
+                debugPrint("Can't get place")
+                return
+            }
+            
             locationManager.delegate = managerDelegate
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
             
-            let geoFCoord = CLLocationCoordinate2D(latitude: 19.324378435363094, longitude: -99.17893055616717)
-            let geoFRegion = CLCircularRegion(center: geoFCoord, radius: 500, identifier: "dsfdwfefewfw")
-            geoFRegion.notifyOnExit = true
-            geoFRegion.notifyOnEntry = true
-            locationManager.startMonitoring(for: geoFRegion)
+            let circularRegion = CLCircularRegion(center: place.coordinate, radius: self.radius, identifier: place.id.uuidString)
+            circularRegion.notifyOnExit = true
+            circularRegion.notifyOnEntry = true
+            locationManager.startMonitoring(for: circularRegion)
         })
     }
 }
 
 struct GeofencesView_Previews: PreviewProvider {
     static var previews: some View {
-        GeofencesView()
+        GeofencesView(places: [
+            Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
+        ], radius: 200)
     }
 }

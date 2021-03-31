@@ -22,11 +22,13 @@ struct ContentView: View {
                 NavigationLink(
                     destination: NotificationView(),
                     label: {
-                        Text("Notifications")
+                        Text("Custom Notification")
                     })
                 
                 NavigationLink(
-                    destination: GeofencesView(),
+                    destination: GeofencesView(places: [
+                        Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
+                    ], radius: 100),
                     label: {
                         Text("Geofences")
                     })

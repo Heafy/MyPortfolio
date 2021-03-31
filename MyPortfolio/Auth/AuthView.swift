@@ -5,23 +5,38 @@
 //  Created by Jorge Martinez on 29/03/21.
 //
 
+import Introspect
 import LocalAuthentication
 import SwiftUI
 
 struct AuthView: View {
     
+    @State private var password: String = ""
     @State private var isUnlocked = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
+            
             if self.isUnlocked {
                 Text("Unlocked").foregroundColor(.green)
+                    .font(.title3)
             } else {
                 Text("Locked").foregroundColor(.red)
+                    .font(.title3)
             }
-        }
-        .font(.title)
+                        
+            SecureField("Password", text: $password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .introspectTextField(customize: {
+                    textField in
+                    textField.becomeFirstResponder()
+                })
+            
+                
+        } //: VStack
+        .padding()
         .onAppear(perform: authenticate)
+        .navigationBarTitle("Face & Touch ID", displayMode: .inline)
     }
     
     func authenticate() {

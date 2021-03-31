@@ -14,29 +14,27 @@ class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .authorizedWhenInUse {
-            print("Authorized")
             manager.startUpdatingLocation()
         } else {
-            print("Not authorized")
             manager.requestWhenInUseAuthorization()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Location updated: \(locations.last?.coordinate)")
+        debugPrint("Location updated: \(String(describing: locations.last?.coordinate))")
     }
     
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        print("Did start monitoring: \(region.identifier)")
+        debugPrint("Did start monitoring: \(region.identifier)")
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("Salio de la region: \(region.identifier)")
+        debugPrint("Exit region: \(region.identifier)")
         self.isInRegion = false
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("Entro a la región")
+        debugPrint("Enter region: \(region.identifier)")
         self.isInRegion = true
     }
     

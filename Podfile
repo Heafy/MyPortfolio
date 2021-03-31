@@ -7,5 +7,5 @@ target 'MyPortfolio' do
 
   # Pods for MyPortfolio
   pod 'lottie-ios'
-
+  pod "Introspect"
 end
