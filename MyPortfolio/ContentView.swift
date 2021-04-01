@@ -8,38 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-        
+    
+    var options: [MenuOption] = [
+        MenuOption(name: "Face & Touch ID", systemImage: "faceid", view: AnyView(AuthView())),
+        MenuOption(name: "Custom Notifications", systemImage: "bell.badge", view: AnyView(NotificationView())),
+        MenuOption(name: "Geofences", systemImage: "mappin.and.ellipse", view: AnyView(GeofencesView(places: [
+            Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
+        ], radius: 100))),
+        MenuOption(name: "Image selector", systemImage: "photo.on.rectangle", view: AnyView(SelectImageView()))
+    ]
+    
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
-                
-                NavigationLink(
-                    destination: AuthView(),
-                    label: {
-                        Text("Face & Touch ID")
-                    })
-                
-                NavigationLink(
-                    destination: NotificationView(),
-                    label: {
-                        Text("Custom Notification")
-                    })
-                
-                NavigationLink(
-                    destination: GeofencesView(places: [
-                        Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
-                    ], radius: 100),
-                    label: {
-                        Text("Geofences")
-                    })
-                
-                NavigationLink(
-                    destination: SelectImageView(),
-                    label: {
-                        Text("Select image")
-                    })
-            }
-        }
+            List {
+                ForEach(options) {
+                    item in
+                    NavigationLink(
+                        destination: item.view,
+                        label: {
+                            RowView(option: item)
+                        })
+                } //: ForEach
+            } //: List
+            .navigationTitle("Features")
+        } //: NavigationView
     }
 }
 

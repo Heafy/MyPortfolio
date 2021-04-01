@@ -22,7 +22,7 @@ struct GeofencesView: View {
     var body: some View {
         VStack {
             
-            Group {
+            GroupBox {
                 if managerDelegate.isInRegion {
                     Text("Está en la Geofence")
                         .foregroundColor(.green)
@@ -30,7 +30,7 @@ struct GeofencesView: View {
                     Text("No está en la Geofence")
                         .foregroundColor(.red)
                 }
-            } //: Group
+            } //: GroupBox
             .padding()
             .multilineTextAlignment(.center)
             

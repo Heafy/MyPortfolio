@@ -11,7 +11,7 @@ import SwiftUI
 struct MyPortfolioApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().onAppear(perform: {
+            TabMenuView().onAppear(perform: {
                 let debitOverdraftNotifCategory = UNNotificationCategory(identifier: "customNotificationCategory", actions: [], intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([debitOverdraftNotifCategory])
             })
