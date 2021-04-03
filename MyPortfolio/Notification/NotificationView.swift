@@ -10,7 +10,7 @@ import SwiftUI
 struct NotificationView: View {
     
     @ObservedObject var notificationManager = NotificationViewModel()
-    @State var showFootnote = true
+    @State var showFootnote = false
     
     var body: some View {
         VStack(spacing: 20) {

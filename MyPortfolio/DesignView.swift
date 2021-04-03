@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct DesignView: View {
+    
+    var options: [MenuOption] = [
+        MenuOption(name: "Onboarding", systemImage: "square.and.line.vertical.and.square", view: AnyView(OnboardingView())),
+    ]
+    
     var body: some View {
-        Text("Design View")
+        NavigationView {
+            List {
+                ForEach(options) {
+                    item in
+                    NavigationLink(
+                        destination: item.view,
+                        label: {
+                            RowView(option: item)
+                        })
+                } //: ForEach
+            } //: List
+            .navigationTitle("Design")
+        } //: NavigationView
     }
 }
 
