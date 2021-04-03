@@ -11,6 +11,7 @@ struct DesignView: View {
     
     var options: [MenuOption] = [
         MenuOption(name: "Onboarding", systemImage: "square.and.line.vertical.and.square", view: AnyView(OnboardingView())),
+        MenuOption(name: "Logo Designer", systemImage: "sun.min", view: AnyView(SymbolView()))
     ]
     
     var body: some View {

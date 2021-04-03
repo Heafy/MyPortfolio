@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1314281C2618F9ED00D7400E /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314281B2618F9ED00D7400E /* HexagonParameters.swift */; };
+		131428202618FA3400D7400E /* BadgeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314281F2618FA3400D7400E /* BadgeBackgroundView.swift */; };
+		131428242618FE0D00D7400E /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131428232618FE0C00D7400E /* BadgeView.swift */; };
+		131428282618FE5700D7400E /* RotatedBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131428272618FE5700D7400E /* RotatedBadgeView.swift */; };
+		1314282C261901A200D7400E /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314282B261901A200D7400E /* SymbolView.swift */; };
+		13A8DD8F2616C93500D393D1 /* SansForgetica-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13A8DD8E2616C93500D393D1 /* SansForgetica-Regular.otf */; };
+		13A8DD942616DE5C00D393D1 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8DD932616DE5C00D393D1 /* OnboardingCardView.swift */; };
+		13A8DD982616EDCD00D393D1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8DD972616EDCD00D393D1 /* OnboardingView.swift */; };
 		13CC9D5D261510D60092471F /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC9D5C261510D60092471F /* TabMenuView.swift */; };
 		13CC9D612615139B0092471F /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC9D602615139B0092471F /* DesignView.swift */; };
 		13CC9D652615154F0092471F /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC9D642615154F0092471F /* MenuOption.swift */; };
 		13CC9D6A2615196B0092471F /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CC9D692615196B0092471F /* RowView.swift */; };
+		13D34B3626183BEA004DA10A /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D34B3526183BEA004DA10A /* SearchListView.swift */; };
+		13D34B3C26183BFF004DA10A /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D34B3B26183BFF004DA10A /* OnboardingModel.swift */; };
+		13D34B40261841B9004DA10A /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D34B3F261841B9004DA10A /* SearchListViewModel.swift */; };
 		13D607D326125BB7004F5E7B /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D607D226125BB7004F5E7B /* SelectImageView.swift */; };
 		13D607D626125DF5004F5E7B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D607D526125DF5004F5E7B /* AuthView.swift */; };
 		13D607FB26126C1A004F5E7B /* GeofencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D607FA26126C1A004F5E7B /* GeofencesView.swift */; };
@@ -61,10 +72,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1314281B2618F9ED00D7400E /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		1314281F2618FA3400D7400E /* BadgeBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackgroundView.swift; sourceTree = "<group>"; };
+		131428232618FE0C00D7400E /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		131428272618FE5700D7400E /* RotatedBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeView.swift; sourceTree = "<group>"; };
+		1314282B261901A200D7400E /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
+		13A8DD8E2616C93500D393D1 /* SansForgetica-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SansForgetica-Regular.otf"; sourceTree = "<group>"; };
+		13A8DD932616DE5C00D393D1 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		13A8DD972616EDCD00D393D1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		13CC9D5C261510D60092471F /* TabMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
 		13CC9D602615139B0092471F /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		13CC9D642615154F0092471F /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 		13CC9D692615196B0092471F /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		13D34B3526183BEA004DA10A /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		13D34B3B26183BFF004DA10A /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		13D34B3F261841B9004DA10A /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
 		13D607D226125BB7004F5E7B /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
 		13D607D526125DF5004F5E7B /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		13D607FA26126C1A004F5E7B /* GeofencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencesView.swift; sourceTree = "<group>"; };
@@ -115,6 +137,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13A8DD922616DE4600D393D1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				13A8DD932616DE5C00D393D1 /* OnboardingCardView.swift */,
+				13A8DD972616EDCD00D393D1 /* OnboardingView.swift */,
+				13D34B3B26183BFF004DA10A /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		13C1ABAD2618EAE600184CB5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				13D6081A2612B525004F5E7B /* ImagePicker */,
+				13D6081B2612B537004F5E7B /* Geofences */,
+				13D6081C2612B542004F5E7B /* Auth */,
+				13D6081E2612B6BF004F5E7B /* Notification */,
+				13D34B3426183BDB004DA10A /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		13C1ABAE2618EAEB00184CB5 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				1314281B2618F9ED00D7400E /* HexagonParameters.swift */,
+				1314281F2618FA3400D7400E /* BadgeBackgroundView.swift */,
+				131428232618FE0C00D7400E /* BadgeView.swift */,
+				131428272618FE5700D7400E /* RotatedBadgeView.swift */,
+				1314282B261901A200D7400E /* SymbolView.swift */,
+				13CC9D602615139B0092471F /* DesignView.swift */,
+				13A8DD922616DE4600D393D1 /* Onboarding */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		13D34B3426183BDB004DA10A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				13D34B3526183BEA004DA10A /* SearchListView.swift */,
+				13D34B3F261841B9004DA10A /* SearchListViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		13D6081A2612B525004F5E7B /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +229,13 @@
 			path = "Notification Content Extension";
 			sourceTree = "<group>";
 		};
+		13F35F33261B5E3500D9B20B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		13FBB42E260EBD8C0073493A = {
 			isa = PBXGroup;
 			children = (
@@ -185,10 +259,10 @@
 		13FBB439260EBD8C0073493A /* MyPortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				13D6081E2612B6BF004F5E7B /* Notification */,
-				13D6081C2612B542004F5E7B /* Auth */,
-				13D6081B2612B537004F5E7B /* Geofences */,
-				13D6081A2612B525004F5E7B /* ImagePicker */,
+				13F35F33261B5E3500D9B20B /* API */,
+				13C1ABAE2618EAEB00184CB5 /* Design */,
+				13C1ABAD2618EAE600184CB5 /* Features */,
+				13A8DD8E2616C93500D393D1 /* SansForgetica-Regular.otf */,
 				13FBB471260EF1E30073493A /* Loading */,
 				13FBB43A260EBD8C0073493A /* MyPortfolioApp.swift */,
 				13FBB43C260EBD8C0073493A /* ContentView.swift */,
@@ -196,7 +270,6 @@
 				13FBB443260EBD8D0073493A /* Info.plist */,
 				13FBB440260EBD8D0073493A /* Preview Content */,
 				13CC9D5C261510D60092471F /* TabMenuView.swift */,
-				13CC9D602615139B0092471F /* DesignView.swift */,
 				13CC9D642615154F0092471F /* MenuOption.swift */,
 				13CC9D692615196B0092471F /* RowView.swift */,
 			);
@@ -331,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A8DD8F2616C93500D393D1 /* SansForgetica-Regular.otf in Resources */,
 				13FBB442260EBD8D0073493A /* Preview Assets.xcassets in Resources */,
 				13FBB43F260EBD8D0073493A /* Assets.xcassets in Resources */,
 				13FBB475260EF1E30073493A /* loading.json in Resources */,
@@ -398,18 +472,28 @@
 				13D607FB26126C1A004F5E7B /* GeofencesView.swift in Sources */,
 				13CC9D612615139B0092471F /* DesignView.swift in Sources */,
 				13FA69302613892D00AF3FBE /* MapView.swift in Sources */,
+				13D34B3626183BEA004DA10A /* SearchListView.swift in Sources */,
 				13D608242612B6E7004F5E7B /* NotificationViewModel.swift in Sources */,
 				13CC9D652615154F0092471F /* MenuOption.swift in Sources */,
 				13D607D626125DF5004F5E7B /* AuthView.swift in Sources */,
 				13D607D326125BB7004F5E7B /* SelectImageView.swift in Sources */,
 				13FBB476260EF1E30073493A /* TestView.swift in Sources */,
+				131428202618FA3400D7400E /* BadgeBackgroundView.swift in Sources */,
+				13A8DD942616DE5C00D393D1 /* OnboardingCardView.swift in Sources */,
+				13D34B3C26183BFF004DA10A /* OnboardingModel.swift in Sources */,
+				13D34B40261841B9004DA10A /* SearchListViewModel.swift in Sources */,
 				13CC9D6A2615196B0092471F /* RowView.swift in Sources */,
+				13A8DD982616EDCD00D393D1 /* OnboardingView.swift in Sources */,
 				13FBB43D260EBD8C0073493A /* ContentView.swift in Sources */,
 				13FBB43B260EBD8C0073493A /* MyPortfolioApp.swift in Sources */,
 				13FBB477260EF1E30073493A /* LottieView.swift in Sources */,
 				13FBB47A260EF9490073493A /* ImagePickerView.swift in Sources */,
 				13D6081026127411004F5E7B /* LocationDelegate.swift in Sources */,
+				1314282C261901A200D7400E /* SymbolView.swift in Sources */,
+				131428242618FE0D00D7400E /* BadgeView.swift in Sources */,
 				13D608202612B6D8004F5E7B /* NotificationView.swift in Sources */,
+				1314281C2618F9ED00D7400E /* HexagonParameters.swift in Sources */,
+				131428282618FE5700D7400E /* RotatedBadgeView.swift in Sources */,
 				13CC9D5D261510D60092471F /* TabMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
