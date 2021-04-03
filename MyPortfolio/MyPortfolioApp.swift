@@ -12,8 +12,9 @@ struct MyPortfolioApp: App {
     var body: some Scene {
         WindowGroup {
             TabMenuView().onAppear(perform: {
-                let debitOverdraftNotifCategory = UNNotificationCategory(identifier: "customNotificationCategory", actions: [], intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([debitOverdraftNotifCategory])
+                                
+                let customNotificationCategory = UNNotificationCategory(identifier: "customNotificationCategory", actions: [], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([customNotificationCategory])
             })
         }
     }

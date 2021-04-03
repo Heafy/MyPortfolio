@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSCameraUsageDescription</key>
+    <string>Permiso Camera Usage</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Probando Face ID</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
