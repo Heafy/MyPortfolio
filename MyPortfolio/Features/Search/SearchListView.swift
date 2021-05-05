@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct SearchListView: View {
+    
+    @State private var searchText : String = ""
+    @ObservedObject var viewModel = SearchListViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SearchBar(text: $searchText)
+            List {
+                ForEach( viewModel.pokemonList.filter {
+                    pokemon in
+                    return searchText.isEmpty ? true : pokemon.name.contains(self.searchText)
+                } ) {
+                   pokemon in
+                    Text(pokemon.name)
+                        .textCase(.uppercase)
+                } //: ForEach
+                .redacted(reason: viewModel.isLoading ? .placeholder: [])
+            } //: List
+            .onAppear(perform: {
+                viewModel.isLoading = true
+                viewModel.getPokemons()
+            })
+            .navigationBarTitle("Search list", displayMode: .inline)
+        } //: VStack
     }
 }
 

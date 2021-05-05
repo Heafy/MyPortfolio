@@ -15,7 +15,10 @@ struct ContentView: View {
         MenuOption(name: "Geofences", systemImage: "mappin.and.ellipse", view: AnyView(GeofencesView(places: [
             Place(name: "Facultad de Ciencias", latitude: 19.324378435363094, longitude: -99.17893055616717),
         ], radius: 100))),
-        MenuOption(name: "Image selector", systemImage: "photo.on.rectangle", view: AnyView(SelectImageView()))
+        MenuOption(name: "Image selector", systemImage: "photo.on.rectangle", view: AnyView(SelectImageView())),
+        MenuOption(name: "Search List", systemImage: "tortoise", view: AnyView(SearchListView())),
+        MenuOption(name: "VisionKit", systemImage: "doc.text.viewfinder", view: AnyView(VisionKitView())),
+        MenuOption(name: "Forms", systemImage: "doc.text", view: AnyView(FormsView()))
     ]
     
     var body: some View {
