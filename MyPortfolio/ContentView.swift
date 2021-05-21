@@ -18,7 +18,10 @@ struct ContentView: View {
         MenuOption(name: "Image selector", systemImage: "photo.on.rectangle", view: AnyView(SelectImageView())),
         MenuOption(name: "Search List", systemImage: "tortoise", view: AnyView(SearchListView())),
         MenuOption(name: "VisionKit", systemImage: "doc.text.viewfinder", view: AnyView(VisionKitView())),
-        MenuOption(name: "Forms", systemImage: "doc.text", view: AnyView(FormsView()))
+        MenuOption(name: "Forms", systemImage: "doc.text", view: AnyView(FormsView())),
+        MenuOption(name: "SwiftUI to UIKit", systemImage: "arrow.left.arrow.right", view: AnyView(UIKitViewControllerRepresentable()
+                        .edgesIgnoringSafeArea([.top,.bottom])
+                        .navigationBarTitle("UIKit", displayMode: .inline)))
     ]
     
     var body: some View {

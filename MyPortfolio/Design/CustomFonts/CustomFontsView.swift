@@ -44,6 +44,7 @@ struct CustomFontsView: View {
 struct CustomFontsView_Previews: PreviewProvider {
     static var previews: some View {
         CustomFontsView()
+            
     }
 }
 

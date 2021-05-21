@@ -18,6 +18,10 @@
 		1341304B26390B5200351C2B /* RedactedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341304A26390B5200351C2B /* RedactedView.swift */; };
 		13817D4726255B83000EC415 /* VisionKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4626255B83000EC415 /* VisionKitView.swift */; };
 		13817D4B26255CE0000EC415 /* VisionKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */; };
+		13A898B7264368FE00BAC750 /* UIKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A898B6264368FE00BAC750 /* UIKit.storyboard */; };
+		13A898B92643691800BAC750 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A898B82643691800BAC750 /* UIKitViewController.swift */; };
+		13A898BB26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A898BA26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift */; };
+		13A898BD2643A0D100BAC750 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A898BC2643A0D100BAC750 /* SwiftUIView.swift */; };
 		13A8DD8F2616C93500D393D1 /* SansForgetica-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13A8DD8E2616C93500D393D1 /* SansForgetica-Regular.otf */; };
 		13A8DD942616DE5C00D393D1 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8DD932616DE5C00D393D1 /* OnboardingCardView.swift */; };
 		13A8DD982616EDCD00D393D1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8DD972616EDCD00D393D1 /* OnboardingView.swift */; };
@@ -95,6 +99,10 @@
 		1341304A26390B5200351C2B /* RedactedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactedView.swift; sourceTree = "<group>"; };
 		13817D4626255B83000EC415 /* VisionKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionKitView.swift; sourceTree = "<group>"; };
 		13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionKitViewModel.swift; sourceTree = "<group>"; };
+		13A898B6264368FE00BAC750 /* UIKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKit.storyboard; sourceTree = "<group>"; };
+		13A898B82643691800BAC750 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		13A898BA26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		13A898BC2643A0D100BAC750 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		13A8DD8E2616C93500D393D1 /* SansForgetica-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SansForgetica-Regular.otf"; sourceTree = "<group>"; };
 		13A8DD932616DE5C00D393D1 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		13A8DD972616EDCD00D393D1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -207,6 +215,17 @@
 			path = VisionKit;
 			sourceTree = "<group>";
 		};
+		13A898B52643663900BAC750 /* UIKitInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				13A898B6264368FE00BAC750 /* UIKit.storyboard */,
+				13A898B82643691800BAC750 /* UIKitViewController.swift */,
+				13A898BA26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift */,
+				13A898BC2643A0D100BAC750 /* SwiftUIView.swift */,
+			);
+			path = UIKitInteraction;
+			sourceTree = "<group>";
+		};
 		13A8DD922616DE4600D393D1 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +239,7 @@
 		13C1ABAD2618EAE600184CB5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				13A898B52643663900BAC750 /* UIKitInteraction */,
 				132515C02637BA850073EC94 /* Forms */,
 				13817D4526255A7D000EC415 /* VisionKit */,
 				13D6081A2612B525004F5E7B /* ImagePicker */,
@@ -481,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A8DD8F2616C93500D393D1 /* SansForgetica-Regular.otf in Resources */,
+				13A898B7264368FE00BAC750 /* UIKit.storyboard in Resources */,
 				13FBB442260EBD8D0073493A /* Preview Assets.xcassets in Resources */,
 				13FBB43F260EBD8D0073493A /* Assets.xcassets in Resources */,
 				13FBB475260EF1E30073493A /* loading.json in Resources */,
@@ -552,6 +573,7 @@
 				13CC9D612615139B0092471F /* DesignView.swift in Sources */,
 				13FA69302613892D00AF3FBE /* MapView.swift in Sources */,
 				1306C23B263BC10000000E19 /* RedactedCustomModifier.swift in Sources */,
+				13A898BD2643A0D100BAC750 /* SwiftUIView.swift in Sources */,
 				13817D4B26255CE0000EC415 /* VisionKitViewModel.swift in Sources */,
 				13D34B3626183BEA004DA10A /* SearchListView.swift in Sources */,
 				13D608242612B6E7004F5E7B /* NotificationViewModel.swift in Sources */,
@@ -561,6 +583,7 @@
 				13FBB476260EF1E30073493A /* TestView.swift in Sources */,
 				131428202618FA3400D7400E /* BadgeBackgroundView.swift in Sources */,
 				13F35F41261B683800D9B20B /* PortfolioService.swift in Sources */,
+				13A898B92643691800BAC750 /* UIKitViewController.swift in Sources */,
 				13A8DD942616DE5C00D393D1 /* OnboardingCardView.swift in Sources */,
 				13D34B3C26183BFF004DA10A /* OnboardingModel.swift in Sources */,
 				13F35F35261B5E6100D9B20B /* APIError.swift in Sources */,
@@ -571,6 +594,7 @@
 				13F35F49261B8CE300D9B20B /* SearchBar.swift in Sources */,
 				13FBB43D260EBD8C0073493A /* ContentView.swift in Sources */,
 				13F35F39261B5E8800D9B20B /* APISession.swift in Sources */,
+				13A898BB26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift in Sources */,
 				13FBB43B260EBD8C0073493A /* MyPortfolioApp.swift in Sources */,
 				13FBB477260EF1E30073493A /* LottieView.swift in Sources */,
 				13FBB47A260EF9490073493A /* ImagePickerView.swift in Sources */,
