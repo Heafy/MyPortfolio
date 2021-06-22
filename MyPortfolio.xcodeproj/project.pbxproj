@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		1314282C261901A200D7400E /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1314282B261901A200D7400E /* SymbolView.swift */; };
 		132515C22637BA950073EC94 /* FormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132515C12637BA950073EC94 /* FormsView.swift */; };
 		1341304B26390B5200351C2B /* RedactedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341304A26390B5200351C2B /* RedactedView.swift */; };
+		1346049E2682AECA005C5312 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1346049D2682AECA005C5312 /* Lottie */; };
+		134604A12682AEFB005C5312 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 134604A02682AEFB005C5312 /* Introspect */; };
 		13817D4726255B83000EC415 /* VisionKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4626255B83000EC415 /* VisionKitView.swift */; };
 		13817D4B26255CE0000EC415 /* VisionKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */; };
 		13A898B7264368FE00BAC750 /* UIKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A898B6264368FE00BAC750 /* UIKit.storyboard */; };
@@ -60,7 +62,6 @@
 		13FBB476260EF1E30073493A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FBB473260EF1E30073493A /* TestView.swift */; };
 		13FBB477260EF1E30073493A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FBB474260EF1E30073493A /* LottieView.swift */; };
 		13FBB47A260EF9490073493A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FBB479260EF9490073493A /* ImagePickerView.swift */; };
-		32AE3D8E8BAA4156544A1D48 /* Pods_MyPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C10D5BD8519F95CB921BB4 /* Pods_MyPortfolio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,9 +144,6 @@
 		13FBB473260EF1E30073493A /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		13FBB474260EF1E30073493A /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		13FBB479260EF9490073493A /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
-		C3C10D5BD8519F95CB921BB4 /* Pods_MyPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF735F5611D515154A397910 /* Pods-MyPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPortfolio.release.xcconfig"; path = "Target Support Files/Pods-MyPortfolio/Pods-MyPortfolio.release.xcconfig"; sourceTree = "<group>"; };
-		EB6CA8A69BF781A74CE69C48 /* Pods-MyPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPortfolio.debug.xcconfig"; path = "Target Support Files/Pods-MyPortfolio/Pods-MyPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +160,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AE3D8E8BAA4156544A1D48 /* Pods_MyPortfolio.framework in Frameworks */,
+				1346049E2682AECA005C5312 /* Lottie in Frameworks */,
+				134604A12682AEFB005C5312 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +337,6 @@
 				13FBB439260EBD8C0073493A /* MyPortfolio */,
 				13D608302612DC28004F5E7B /* Notification Content Extension */,
 				13FBB438260EBD8C0073493A /* Products */,
-				CB17B24360E4FE269D41BFAA /* Pods */,
 				396071FFE61FFB50A3655372 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -393,20 +391,10 @@
 		396071FFE61FFB50A3655372 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3C10D5BD8519F95CB921BB4 /* Pods_MyPortfolio.framework */,
 				13D6082C2612DC28004F5E7B /* UserNotifications.framework */,
 				13D6082E2612DC28004F5E7B /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CB17B24360E4FE269D41BFAA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EB6CA8A69BF781A74CE69C48 /* Pods-MyPortfolio.debug.xcconfig */,
-				CF735F5611D515154A397910 /* Pods-MyPortfolio.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,11 +421,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13FBB446260EBD8D0073493A /* Build configuration list for PBXNativeTarget "MyPortfolio" */;
 			buildPhases = (
-				48E3B42DE353C08A7AC2E953 /* [CP] Check Pods Manifest.lock */,
 				13FBB433260EBD8C0073493A /* Sources */,
 				13FBB434260EBD8C0073493A /* Frameworks */,
 				13FBB435260EBD8C0073493A /* Resources */,
-				06DDE562382DB55A7E2AF57C /* [CP] Embed Pods Frameworks */,
 				13D6083D2612DC28004F5E7B /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -446,6 +432,10 @@
 				13D608382612DC28004F5E7B /* PBXTargetDependency */,
 			);
 			name = MyPortfolio;
+			packageProductDependencies = (
+				1346049D2682AECA005C5312 /* Lottie */,
+				134604A02682AEFB005C5312 /* Introspect */,
+			);
 			productName = MyPortfolio;
 			productReference = 13FBB437260EBD8C0073493A /* MyPortfolio.app */;
 			productType = "com.apple.product-type.application";
@@ -476,6 +466,10 @@
 				Base,
 			);
 			mainGroup = 13FBB42E260EBD8C0073493A;
+			packageReferences = (
+				1346049C2682AECA005C5312 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1346049F2682AEFB005C5312 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 13FBB438260EBD8C0073493A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -509,48 +503,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		06DDE562382DB55A7E2AF57C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPortfolio/Pods-MyPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPortfolio/Pods-MyPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPortfolio/Pods-MyPortfolio-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		48E3B42DE353C08A7AC2E953 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyPortfolio-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13D608272612DC28004F5E7B /* Sources */ = {
@@ -788,7 +740,6 @@
 		};
 		13FBB447260EBD8D0073493A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB6CA8A69BF781A74CE69C48 /* Pods-MyPortfolio.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -812,7 +763,6 @@
 		};
 		13FBB448260EBD8D0073493A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF735F5611D515154A397910 /* Pods-MyPortfolio.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -865,6 +815,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1346049C2682AECA005C5312 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+		1346049F2682AEFB005C5312 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1346049D2682AECA005C5312 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346049C2682AECA005C5312 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		134604A02682AEFB005C5312 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346049F2682AEFB005C5312 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13FBB42F260EBD8C0073493A /* Project object */;
 }
