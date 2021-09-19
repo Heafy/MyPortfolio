@@ -18,8 +18,11 @@
 		1341304B26390B5200351C2B /* RedactedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1341304A26390B5200351C2B /* RedactedView.swift */; };
 		1346049E2682AECA005C5312 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1346049D2682AECA005C5312 /* Lottie */; };
 		134604A12682AEFB005C5312 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 134604A02682AEFB005C5312 /* Introspect */; };
+		134604A32682C743005C5312 /* SettingsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134604A22682C743005C5312 /* SettingsViewModifier.swift */; };
+		134604A52682C951005C5312 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134604A42682C951005C5312 /* SettingsView.swift */; };
 		13817D4726255B83000EC415 /* VisionKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4626255B83000EC415 /* VisionKitView.swift */; };
 		13817D4B26255CE0000EC415 /* VisionKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */; };
+		13853CD926F7DC0A00ED4F4B /* DarkModeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13853CD826F7DC0A00ED4F4B /* DarkModeModifier.swift */; };
 		13A898B7264368FE00BAC750 /* UIKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A898B6264368FE00BAC750 /* UIKit.storyboard */; };
 		13A898B92643691800BAC750 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A898B82643691800BAC750 /* UIKitViewController.swift */; };
 		13A898BB26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A898BA26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift */; };
@@ -98,8 +101,11 @@
 		1314282B261901A200D7400E /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 		132515C12637BA950073EC94 /* FormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsView.swift; sourceTree = "<group>"; };
 		1341304A26390B5200351C2B /* RedactedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedactedView.swift; sourceTree = "<group>"; };
+		134604A22682C743005C5312 /* SettingsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModifier.swift; sourceTree = "<group>"; };
+		134604A42682C951005C5312 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		13817D4626255B83000EC415 /* VisionKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionKitView.swift; sourceTree = "<group>"; };
 		13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionKitViewModel.swift; sourceTree = "<group>"; };
+		13853CD826F7DC0A00ED4F4B /* DarkModeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeModifier.swift; sourceTree = "<group>"; };
 		13A898B6264368FE00BAC750 /* UIKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKit.storyboard; sourceTree = "<group>"; };
 		13A898B82643691800BAC750 /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		13A898BA26436DCB00BAC750 /* UIKitViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewControllerRepresentable.swift; sourceTree = "<group>"; };
@@ -212,6 +218,16 @@
 				13817D4A26255CE0000EC415 /* VisionKitViewModel.swift */,
 			);
 			path = VisionKit;
+			sourceTree = "<group>";
+		};
+		13853CD726F7DBD900ED4F4B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				134604A22682C743005C5312 /* SettingsViewModifier.swift */,
+				134604A42682C951005C5312 /* SettingsView.swift */,
+				13853CD826F7DC0A00ED4F4B /* DarkModeModifier.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		13A898B52643663900BAC750 /* UIKitInteraction */ = {
@@ -353,6 +369,7 @@
 		13FBB439260EBD8C0073493A /* MyPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				13853CD726F7DBD900ED4F4B /* Settings */,
 				13F35F33261B5E3500D9B20B /* API */,
 				13C1ABAE2618EAEB00184CB5 /* Design */,
 				13C1ABAD2618EAE600184CB5 /* Features */,
@@ -517,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13853CD926F7DC0A00ED4F4B /* DarkModeModifier.swift in Sources */,
 				13FA69382613B06500AF3FBE /* Place.swift in Sources */,
 				13817D4726255B83000EC415 /* VisionKitView.swift in Sources */,
 				13F35F45261B6BF200D9B20B /* PokemonList.swift in Sources */,
@@ -534,9 +552,11 @@
 				13D607D326125BB7004F5E7B /* SelectImageView.swift in Sources */,
 				13FBB476260EF1E30073493A /* TestView.swift in Sources */,
 				131428202618FA3400D7400E /* BadgeBackgroundView.swift in Sources */,
+				134604A32682C743005C5312 /* SettingsViewModifier.swift in Sources */,
 				13F35F41261B683800D9B20B /* PortfolioService.swift in Sources */,
 				13A898B92643691800BAC750 /* UIKitViewController.swift in Sources */,
 				13A8DD942616DE5C00D393D1 /* OnboardingCardView.swift in Sources */,
+				134604A52682C951005C5312 /* SettingsView.swift in Sources */,
 				13D34B3C26183BFF004DA10A /* OnboardingModel.swift in Sources */,
 				13F35F35261B5E6100D9B20B /* APIError.swift in Sources */,
 				13D34B40261841B9004DA10A /* SearchListViewModel.swift in Sources */,

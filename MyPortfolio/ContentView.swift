@@ -25,19 +25,18 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(options) {
-                    item in
-                    NavigationLink(
-                        destination: item.view,
-                        label: {
-                            RowView(option: item)
-                        })
-                } //: ForEach
-            } //: List
-            .navigationTitle("Features")
-        } //: NavigationView
+        List {
+            ForEach(options) {
+                item in
+                NavigationLink(
+                    destination: item.view,
+                    label: {
+                        RowView(option: item)
+                    })
+            } //: ForEach
+        } //: List
+        .settingsBarButton()
+        .navigationTitle("Features")
     }
 }
 

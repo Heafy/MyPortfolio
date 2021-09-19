@@ -11,7 +11,6 @@ struct CustomFontsView: View {
     
     private var text: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     @State private var isCustomFont: Bool = false
-    
     @State private var selectedFont: Font = .caption2
     private var fonts: [Font] = [ .caption2, .caption, .footnote, .subheadline, .callout, .body, .headline, .title3, .title2, .title, .largeTitle ]
     

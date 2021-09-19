@@ -11,16 +11,20 @@ struct TabMenuView: View {
     
     var body: some View {
         TabView {
-            ContentView()
-                .tabItem {
-                    Image(systemName: "hammer")
-                    Text("Features")
-                }
-            DesignView()
-                .tabItem {
-                    Image(systemName: "pencil.and.outline")
-                    Text("Design")
-                }
+            NavigationView {
+                ContentView()
+            }
+            .tabItem {
+                Image(systemName: "hammer")
+                Text("Features")
+            }
+            NavigationView {
+                DesignView()
+            }
+            .tabItem {
+                Image(systemName: "pencil.and.outline")
+                Text("Design")
+            }
         }
     } //: TabView
 }

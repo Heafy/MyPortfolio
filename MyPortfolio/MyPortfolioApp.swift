@@ -11,11 +11,12 @@ import SwiftUI
 struct MyPortfolioApp: App {
     var body: some Scene {
         WindowGroup {
-            TabMenuView().onAppear(perform: {
-                                
-                let customNotificationCategory = UNNotificationCategory(identifier: "customNotificationCategory", actions: [], intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([customNotificationCategory])
-            })
+            TabMenuView()
+                .supportDarkMode()
+                .onAppear {
+                    let customNotificationCategory = UNNotificationCategory(identifier: "customNotificationCategory", actions: [], intentIdentifiers: [], options: [])
+                    UNUserNotificationCenter.current().setNotificationCategories([customNotificationCategory])
+                }
         }
     }
 }

@@ -18,19 +18,18 @@ struct DesignView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(options) {
-                    item in
-                    NavigationLink(
-                        destination: item.view,
-                        label: {
-                            RowView(option: item)
-                        })
-                } //: ForEach
-            } //: List
-            .navigationTitle("Design")
-        } //: NavigationView
+        List {
+            ForEach(options) {
+                item in
+                NavigationLink(
+                    destination: item.view,
+                    label: {
+                        RowView(option: item)
+                    })
+            } //: ForEach
+        } //: List
+        .settingsBarButton()
+        .navigationTitle("Design")
     }
 }
 
